@@ -1,0 +1,68 @@
+ .h{
+    color: black;
+    text-align: center;
+ }
+ .part1{
+    overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+   
+ }
+ .l1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+ }
+ .l2{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .l1 .messagep{
+ 
+height: 10vh;
+ 
+display: flex;
+justify-content: center;
+align-items: center;
+font-size:2vw ;
+width: 50vw;
+ }
+ .l2 .click{
+    
+    background-color: black;
+    color: white;
+    padding: 1.3vh;
+   
+    font-size: 1.3vw;
+  
+    border-radius: 1.5vh;
+    
+ }
+ table{
+ margin-top: 2vh;
+    width: 100vw;
+ }
+ tr td{
+    text-align: center;
+    border: 2px solid black;
+    font-size: 2vw;
+ }
+ .imgs{
+    width: 18vw;
+    height: 90px;
+ }
+ tr th{
+    font-size: 2.1vw;
+    text-align: center;
+    border: 2px solid black;
+ }
+ tr{
+    border: 2px solid black;
+ }

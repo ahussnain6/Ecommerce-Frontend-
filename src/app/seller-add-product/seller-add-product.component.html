@@ -1,0 +1,13 @@
+<div class="ino">
+<h1 class="add">Add Your Product</h1>
+<div class="form">
+<form #addproduct="ngForm" (ngSubmit)="submit(addproduct.value)" class="f">
+   <input class="in" type="text" placeholder="PRODUCT NAME" name="name" ngModel>
+   <input  class="in"type="number" placeholder="PRICE" name="price" ngModel>
+   <input class="in" type="text" placeholder="COLOR" name="color" ngModel>
+   <input  class="in"type="file" placeholder="IMAGE URL"  (change)="geturl($event)">
+   <textarea name="desc" class="in" style="resize: none;" ngModel placeholder="DESCRIPTION"></textarea>
+    <button class="btn" >Add Product</button>
+</form>
+</div>
+</div>

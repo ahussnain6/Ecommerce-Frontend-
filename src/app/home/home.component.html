@@ -1,0 +1,59 @@
+<div class="d">
+  <h3 class="h">best place to find and explore that all you need</h3>
+  <div class="input">
+    <div *ngIf="menuType !== 'seller'" class="nav-search">
+      <input
+        type="text"
+        class="search"
+        #searchInput
+        (keyup)="searchProduct($event)"
+        (blur)="hideSearch()"
+        placeholder="Search Products"
+      />
+
+      <button (click)="submitSearch(searchInput.value)" class="btn">
+        Search
+      </button>
+      <ul
+        class="suggested-search"
+        *ngIf="searchResult"
+        style="list-style: none"
+      >
+        <li *ngFor="let item of searchResult">
+          <a (mousedown)="redirectToDetails(item._id)">{{ item.name }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="prod">
+  <h1>All Products</h1>
+
+  <div class="items">
+    <div class="fl" *ngFor="let item of productlist">
+      <div class="item" routerLink="/details/{{ item._id }}">
+        <img src="{{ item.image }}" alt="" class="img" />
+        <div class="det">
+          <h6 class="he">{{ item.name }}</h6>
+          <h6>Price:{{ item.price }}</h6>
+          <h6>Color:{{ item.color }}</h6>
+          <a
+            routerLink="/details/{{ item._id }}"
+            class="bt"
+            style="
+              color: black;
+              padding: 1vh;
+              border: 2px solid lightgray;
+              text-align: center;
+              width: 100%;
+              font-weight: bolder;
+              text-decoration: none;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

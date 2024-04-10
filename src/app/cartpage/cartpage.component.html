@@ -1,0 +1,56 @@
+<div class="cart-page">
+  <h1>Cart Page</h1>
+  <div class="noitem" *ngIf="!cartdata">
+    <h1>No Item Available in Your Cart</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 details" *ngIf="cartdata">
+      <table>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+
+          <th>Delete</th>
+        </tr>
+        <tr *ngFor="let item of cartdata">
+          <td>
+            <img src="{{ item.image }}" alt="iamge" class="imgs" />
+          </td>
+          <td>{{ item.name ? item.name : "Name not Available" }}</td>
+          <td>{{ item.price ? item.price : 0 }}</td>
+          <td>{{ item.quantity ? item.quantity : 0 }}</td>
+          <td>
+            <button class="bu" (click)="removeToCart(item._id)">
+              <fa-icon [icon]="icon" class="in"></fa-icon>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm-4 summary">
+      <h3>Total Bill</h3>
+      <ul>
+        <li>
+          <span>Amount:</span><span>{{ pricetotal.actualprice }}</span>
+        </li>
+        <li>
+          <span>Tax:</span><span>{{ pricetotal.tax }}</span>
+        </li>
+        <li>
+          <span>Delivery:</span><span>{{ pricetotal.delivery }}</span>
+        </li>
+        <li>
+          <span>Discount:</span><span>{{ pricetotal.discount }}</span>
+        </li>
+        <li>
+          <span><h4>Total</h4></span>
+          <span
+            ><h4>Rs.{{ pricetotal.total }}</h4></span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<h1 class="h">Product List</h1>
+<div class="part1">
+  <div class="l1"><p class="messagep">{{ productMessage }}</p></div>
+  <div class="l2">  <button routerLink="/seller-add-product" class="click">ADD MORE PRODUCTS</button></div>
+
+</div>
+<div class="product-list">
+<div class="p">
+  <table>
+    
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Action</th>
+      </tr>
+   
+      <tr *ngFor="let item of productList">
+        <td>
+          <img src="{{item.image}}" alt="iamge" class="imgs" >
+        </td>
+        <td>{{ item.name }}</td>
+        <td>{{item.price }}</td>
+        <td>{{ item.color }}</td>
+        <td>
+          <fa-icon (click)="deleteProduct(item._id)" [icon]="icon" class="in"></fa-icon>
+        </td> 
+      </tr>
+   
+  </table>
+</div>
+</div>

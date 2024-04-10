@@ -1,0 +1,26 @@
+<nav [ngSwitch]="menuType">
+  <div class="logo">Ali-Kart</div>
+  <input type="checkbox" id="click">
+  <label for="click" class="menu-btn">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbSwgeX3k9xVsvc6rla8B4B__xz2GyAbn4g&usqp=CAU" alt="" class="i" >
+  </label>
+    <ul *ngSwitchCase="'default'">
+      <li><a routerLink="seller-sign">Seller</a></li>
+      <li><a  class="active" routerLink="/">Home</a></li>
+      <li><a routerLink="user-sign">Login/Sign-up</a></li>
+      <li><a routerLink="cart-page">Cart</a></li>
+    </ul>
+    <ul *ngSwitchCase="'seller'" >
+      <li><a routerLink="seller-add-product">Add Product</a></li>
+      <li><a routerLink="seller-home">List</a></li>
+      <li (click)="logout()" class="click"><a>Logout</a></li>
+      <li><a routerLink="seller-home">{{sellerName}}</a></li>
+      <li><a routerLink="seller-orders">My Orders</a></li>
+    </ul>
+    <ul *ngSwitchCase="'user'" >
+      <li><a routerLink="/">Home</a></li>
+      <li><a>{{userName}}</a></li>
+      <li><a routerLink="cart-page">Cart</a></li>
+      <li><a (click)="userLogout()" class="click">Logout</a></li>
+    </ul>
+</nav> 

@@ -1,0 +1,246 @@
+ @media screen and (width >= 765px){
+    .sl{    margin-top: 12vh;}
+    .d{filter: contrast(160%);
+        background-image: url("https://www.welovesamplesales.nl/listing_images/medium_87c019984714.jpg");
+    background-size: 100% 100%;width:99.9vw;height: 79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .input{
+        display: flex;
+        padding: 5vh 0vh;}
+    .btn{
+     background-color: black;
+     color:white;}
+    .logo{
+        width: 4vw;
+        margin-right: 0vh;
+        height: 5.5vh;
+        border-radius: .4vh;
+        margin-bottom: .2vh;
+        filter: contrast(120%);
+    }
+    .h{
+        text-shadow: 0 2px 3px black, 
+          1px 3px 4px #222, 
+          0 8px 3px black, 
+          0 11px 4px black,
+          0 14px 4px #222,
+          0 17px 4px #222,
+          0 20px 4px #171717;
+        font-size: 2.5vw;
+        padding-top: 5vh;
+        margin: 0vh 49vh 0vh;
+        color: white;
+        width: 59vw;
+        text-transform: uppercase;}
+    .search{
+        border: none;
+        height: 2.3rem;
+    width: 50vw;
+    }
+    .suggested-search{
+        margin-top:0vh ;
+        z-index: 100;
+        display: list-item !important;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        width: 50vw;
+      }
+      .suggested-search li{
+        padding:5px;
+        list-style: none;
+        border: 1px solid #ddd;
+      }
+      .suggested-search li a{
+        cursor: pointer;
+        color: black;
+        font-size: 1.6vw;
+      }
+    .img{
+    height: 85vh;
+    width: 100%;}
+     
+    
+    .prod{
+        width: 100vw;
+        margin-top: 1vh;
+         
+    } 
+     .prod .fl{
+         
+      
+    margin: 1vh;    
+    } 
+    .prod .items {
+        
+    
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+    .prod h1{
+        text-align: center;
+    }
+    .item{
+        border-radius: 1.5vh;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    border: 2px solid lightgray;
+    width: 22vw;
+    height: 60vh;
+    }
+    .det{
+       
+         width: 100%;
+         height: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .img{
+        
+        object-fit: contain;
+        width: 100%;
+        height: 65%;
+    
+    }
+    .bt{
+        margin-top: 1vh;
+       
+    
+        margin-bottom: 0vh;
+    }
+    .bt:hover{
+        background-color: black;
+        color: white !important;
+    }   
+ }
+ 
+@media screen and (width < 765px){
+    .sl{    margin-top: 12vh;}
+    .d{filter: contrast(160%);
+        background-image: url("https://www.welovesamplesales.nl/listing_images/medium_87c019984714.jpg");
+    background-size: 100% 100%;width:100vw;height: 79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .input{
+        display: flex;
+        padding: 5vh 0vh;}
+    .btn{
+     background-color: black;
+     color:white;}
+    .logo{
+        width: 4vw;
+        margin-right: 0vh;
+        height: 5.5vh;
+        border-radius: .4vh;
+        margin-bottom: .2vh;
+        filter: contrast(120%);
+    }
+    .h{
+        text-shadow: 0 2px 3px black, 
+          1px 3px 4px #222, 
+          0 8px 3px black, 
+          0 11px 4px black,
+          0 14px 4px #222,
+          0 17px 4px #222,
+          0 20px 4px #171717;
+        font-size: 3.4vw;
+        padding-top: 5vh;
+        margin: 0vh 49vh 0vh;
+        color: white;
+        width: 59vw;
+        text-transform: uppercase;}
+    .search{
+        border: none;
+        height: 2.3rem;
+    width: 50vw;
+    }
+    .suggested-search{
+        margin-top:0vh ;
+        z-index: 100;
+        display: list-item !important;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        width: 50vw;
+      }
+      .suggested-search li{
+        padding:5px;
+        list-style: none;
+        border: 1px solid #ddd;
+      }
+      .suggested-search li a{
+        cursor: pointer;
+        color: black;
+        font-size: 2.4vw;
+      }
+    .img{
+    height: 85vh;
+    width: 100%;}
+     
+    
+    .prod{
+        width: 100vw;
+        margin-top: 1vh;
+       
+    } 
+     .prod .fl{
+        
+      
+    margin: 1vh .2vh;    
+    } 
+    .prod .items {
+    
+    
+        display: grid; 
+        grid-template-columns: repeat(2,.1fr);
+        place-items: center;
+        
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+    .prod h1{
+        text-align: center;
+    }
+    .item{
+    
+    width: 48vw;
+    height: 50vh;
+    border-radius: 1.5vh;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    }
+    .det{
+      
+         width: 100%;
+         height: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .img{
+        
+        object-fit: contain;
+        width: 100%;
+        height: 65%;
+    
+    }
+    .bt{
+        margin-top: 1vh;
+    
+        margin-bottom: 0vh;
+    }
+    .bt:hover{
+        background-color: black;
+        color: white !important;
+    }   
+}
