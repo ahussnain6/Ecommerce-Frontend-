@@ -36,12 +36,8 @@ export class SellerHomeComponent implements OnInit{
       this.productMessage = undefined;
     }, 3000)}
     list(){
-       
       this.product.getspro(this.id).subscribe((result:product[])=>{
-        
         if(result){
-          this.productList = result;
-        
-        }else{
+          this.productList = result;}else{
           this.productList = [];}})}
-}
+        }

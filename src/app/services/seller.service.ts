@@ -1,23 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { login, sign } from '../datatype';
-import { JsonPipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-@Injectable({
-  providedIn: 'any'
-})
+@Injectable({providedIn: 'root'})
 export class SellerService implements OnInit {
   authError = new BehaviorSubject<boolean>(false);
-  constructor(private http:HttpClient,private route:Router) { }
-  ngOnInit():void{
-    this.reloadseller();
-  }
+  constructor(private http:HttpClient,private route:Router){}
+  ngOnInit():void{this.reloadseller();}
   reloadseller(){
     if(localStorage.getItem("seller")){
-      this.route.navigate(["seller-home"])
-    }
-  }
+      
+      this.route.navigate(["seller-home"]);}}
   postsign(data:sign){
      data && this.http.post("https://mean-backend-bay.vercel.app/Seller/Signup",
      data,{observe:"response"}

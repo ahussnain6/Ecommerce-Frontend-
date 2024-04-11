@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { cart, product } from '../datatype';
 @Injectable({
-  providedIn: 'any'})
+  providedIn: 'root' })
 export class ProductService {
   constructor(private http:HttpClient){}
   postdata(data:any){
