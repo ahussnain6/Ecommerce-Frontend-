@@ -22,7 +22,7 @@ ngOnInit():void{
   this.updateproduct();
   this.router.navigate(["cart-page"]);
 }
-removeToCart(id:any){
+removeToCart(id:number){
   this.updateproduct();
 this.product.delcart(id).subscribe((data)=>{
   alert("Item Deleted");
@@ -31,7 +31,7 @@ this.product.delcart(id).subscribe((data)=>{
 })}
 updateproduct(){
  let data:any = localStorage.getItem("user");
- let id = (JSON.parse(data).userId)?(JSON.parse(data).userId):(JSON.parse(data)[0].userId); 
+ let id:number = (JSON.parse(data).userId)?(JSON.parse(data).userId):(JSON.parse(data)[0].userId); 
   this.product.getlocalcart(id).subscribe((result:any)=>{
     this.cartdata = result;
     let price = 0;

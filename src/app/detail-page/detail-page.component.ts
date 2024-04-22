@@ -15,7 +15,8 @@ export class DetailPageComponent implements OnInit {
 productData:product | undefined;
   constructor(private product:ProductService,private router:Router,private route:ActivatedRoute){} 
 ngOnInit():void{
-  let productid = this.route.snapshot.paramMap.get("id");
+  let productid:any = this.route.snapshot.paramMap.get("id");
+  console.log(productid);
   productid && this.product.getsproduct(productid).subscribe((data)=>{
     this.productData = data;  })
   }

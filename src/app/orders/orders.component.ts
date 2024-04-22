@@ -17,7 +17,7 @@ export class OrdersComponent implements OnInit {
     }
     updateorders(){
      let seller:any = localStorage.getItem("seller");
-     let id:any = seller && JSON.parse(seller).sellerId;
+     let id:number = seller && JSON.parse(seller).sellerId;
  
       this.product.getsellerorder(id).subscribe((result:any)=>{
         this.orderdata = result;

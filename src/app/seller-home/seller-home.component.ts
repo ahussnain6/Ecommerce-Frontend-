@@ -24,7 +24,7 @@ export class SellerHomeComponent implements OnInit{
   ngOnInit():void{
     this.router.navigate(["seller-home"]);
     this.list();}
-  deleteProduct(id:any){
+  deleteProduct(id:string){
     this.list();
   this.product.deleteProduct(id).subscribe((result)=>{
       this.list();

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { login, sign } from '../datatype';
+import { login, sign, usersignup } from '../datatype';
 import { SellerService } from '../services/seller.service';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
@@ -19,11 +19,13 @@ showLogin = false;
     this.user.reloaduser();
   }
   signup(data:sign){
-    let realdata:any ={
+    let realdata:usersignup ={
       ...data,userId:new Date().getTime()
      } 
  if(data && data.username && data.email.length > 3 && data.password.length > 2){
        this.user.usersign(realdata);
+       console.log(realdata);
+      
  }else if(this.user.authError){
       alert("Invalid Input Data");
      }

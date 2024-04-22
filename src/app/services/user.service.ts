@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { login,} from '../datatype';
+import { login, sign, usersignup,} from '../datatype';
 @Injectable({
   providedIn: 'root'})
 export class UserService implements OnInit{
@@ -11,14 +11,13 @@ export class UserService implements OnInit{
   seller:any;
   constructor(private http:HttpClient,private route:Router) { }
   ngOnInit():void{
-    this.reloaduser();
-  }
+    this.reloaduser();}
   reloaduser(){
     if(localStorage.getItem("user")){
       this.route.navigate([""]);  } }
-     usersign(data:any){
-   data && this.http.post("https://mean-backend-bay.vercel.app/Buyer/Signup",data,
-   {observe:"response"}).subscribe((data)=>{
+     usersign(data:usersignup){
+   data && this.http.post("https://mean-backend-bay.vercel.app/Buyer/Signup",
+   data,{observe:"response"}).subscribe((data)=>{
    if(data.ok){
       localStorage.setItem("user",JSON.stringify(data.body));
       this.reloaduser();
